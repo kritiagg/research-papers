@@ -26,7 +26,7 @@ embeddings of wt
 t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
  ## Model
  - First layer : Bi direction LSTM for POS tagging
-  - input: word embeddings
+    - input: word embeddings
  - Second Layer: Bi direction LSTM for chunking
-  - Input : output of first layer
-    - word embeddings
+    - Input : output of first layer
+       - word embeddings
