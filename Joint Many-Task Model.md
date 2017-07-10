@@ -28,12 +28,20 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
  ## Model
  - Word level task: POS tagging
     - Bi direction LSTM
-    - input: word embeddings
+    - input: word embeddings, hidden states from the same layer but previous time(h<sub>t-1<sub>) as showm in the image below.
     - The weights of the forward and backward LSTMs are concatenated and placed in w<sub>t<sub>.
     - Simple softmax and relu is used for tagging POS
  - Word level task: Chunking
     - Tags/specifies region of major phrases in sentence.
     - Bi direction LSTM 
-    - Input : output of first layer
+    - Input : output of first layer, hidden states from the same layer but previous time (its a LSTM!)
        - word embeddings
- - 
+       - ![input.png](3.PNG)
+ ![posnchunking.PNG](2.NG)
+- Syntactic task : Dependency parsing
+   - Identifies syntactic relationships(such as adjective modifying a noun) between a pair of words in a sentence. 
+   - Bi direction LSTM
+   - Input : word embeddings, outputs from the last 2 layers, hidden states from the same layer but previous time.
+     - ![input.png](4.PNG
+   
+   
