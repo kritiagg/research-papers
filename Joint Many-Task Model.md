@@ -68,7 +68,7 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
   - cross entropy loss and L2 regularization
   - interesting is the successive L2 regularization term which is used to take into account the information learnt from other tasks
      ![succ_reg.png](5.PNG)
-  - \theta_e is the current embedding, \theta_e' is the final embedding after training the final task in teh top most layer at previous training epoch.
+  - {\theta_e} is the current embedding, {\theta_e}' is the final embedding after training the final task in teh top most layer at previous training epoch.
   
   
    
