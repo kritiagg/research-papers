@@ -24,10 +24,12 @@ embeddings of wt
 . For example, the character ngrams
 (n = 1, 2, 3) of the word “Cat” are {C, a,
 t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
-- Each word is then represented as x<sub>t</sub>by concatenating the word and character embeddings.
+- Each word is then represented as x<sub>t</sub> by concatenating the word and character embeddings.
  ## Model
  - First layer : Bi direction LSTM for POS tagging
     - input: word embeddings
+    - The outputs of the forward and backward LSTMs are concatenated and placed in a matrix
+    - Simple softmax and relu is used for tagging POS
  - Second Layer: Bi direction LSTM for chunking
     - Input : output of first layer
        - word embeddings
