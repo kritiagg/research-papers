@@ -7,7 +7,12 @@ By Salesforce guys: **Kazuma Hashimoto
   -  Higher layers include
 shortcut connections to lower-level
 task predictions to reflect linguistic hierarchies.
- - 
+ - predicts increasingly
+complex NLP tasks at successively deeper layers.
+ - motivated by Søgaard and
+Goldberg (2016) who showed that predicting two
+different tasks is more accurate when performed in
+different layers than in the same layer
 
 ![1.PNG](arch.png)
 
