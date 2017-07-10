@@ -4,12 +4,12 @@ By Salesforce guys: **Kazuma Hashimoto
 
 ## Abstract
 - For end-to-end training of 5 tasks : POS tagging, chunking, dependency parsing, semantic relatedness, and textual entailment
-  -  Higher layers include
+-  Higher layers include
 shortcut connections to lower-level
 task predictions to reflect linguistic hierarchies.
- - predicts increasingly
+- predicts increasingly
 complex NLP tasks at successively deeper layers.
- - motivated by Søgaard and
+- motivated by Søgaard and
 Goldberg (2016) who showed that predicting two
 different tasks is more accurate when performed in
 different layers than in the same layer
@@ -26,11 +26,14 @@ embeddings of wt
 t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
 - Each word is then represented as x<sub>t</sub> by concatenating the word and character embeddings.
  ## Model
- - First layer : Bi direction LSTM for POS tagging
+ - Word level task: POS tagging
+    - Bi direction LSTM
     - input: word embeddings
-    - The outputs of the forward and backward LSTMs are concatenated and placed in a matrix
+    - The weights of the forward and backward LSTMs are concatenated and placed in w<sub>t<sub>.
     - Simple softmax and relu is used for tagging POS
- - Second Layer: Bi direction LSTM for chunking
+ - Word level task: Chunking
+    - Tags/specifies region of major phrases in sentence.
+    - Bi direction LSTM 
     - Input : output of first layer
        - word embeddings
  - 
