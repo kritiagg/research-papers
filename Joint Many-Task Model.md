@@ -24,7 +24,7 @@ embeddings of wt
 . For example, the character ngrams
 (n = 1, 2, 3) of the word “Cat” are {C, a,
 t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
-- Each word is then represented as x<sup>t</sup>by concatenating the word and character embeddings.
+- Each word is then represented as x<sub>t</sub>by concatenating the word and character embeddings.
  ## Model
  - First layer : Bi direction LSTM for POS tagging
     - input: word embeddings
