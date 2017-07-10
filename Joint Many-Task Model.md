@@ -14,7 +14,7 @@ Goldberg (2016) who showed that predicting two
 different tasks is more accurate when performed in
 different layers than in the same layer
 
-![architecture.PNG](1.PNG)
+![architecture.PNG](img/joint-many-tasks/joint many tasks.PNG)
 
 ## Embeddings
 - Word embeddings: skip gram to train word embedding matrix shared across all tasks. For unknown tokens, only one token UNK
@@ -36,13 +36,13 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
     - Bi direction LSTM 
     - Input : output of first layer, hidden states from the same layer but previous time (its a LSTM!)
        - word embeddings
-       - ![input.png](3.PNG)
- ![posnchunking.PNG](2.png)
+       - ![input.png](img/joint-many-tasks/3.PNG)
+ ![posnchunking.PNG](img/joint-many-tasks/2.png)
 - Syntactic task : Dependency parsing
    - Identifies syntactic relationships(such as adjective modifying a noun) between a pair of words in a sentence. 
    - Bi direction LSTM
    - Input : word embeddings, outputs from the last 2 layers, hidden states from the same layer but previous time.
-     - ![input.png](4.PNG)
+     - ![input.png](img/joint-many-tasks/4.PNG)
    - Predict the parent node for every word in a sentence.
    - standard bi LSTM + softmax and relu for dependency label which is then used in the calculation of the probability of a word being a parent.
    - By now we have 5 layers of bi LSTM
@@ -67,7 +67,7 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
 - Training POS Layer:
   - cross entropy loss and L2 regularization
   - interesting is the successive L2 regularization term which is used to take into account the information learnt from other tasks
-     ![succ_reg.png](5.PNG)
+     ![succ_reg.png](img/joint-many-tasks/5.PNG)
   - {\theta_e} is the current embedding, {\theta_e}' is the final embedding after training the final task in teh top most layer at previous training epoch.
   
   
