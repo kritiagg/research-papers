@@ -2,5 +2,5 @@
 
 By Salesforce guys: **Kazuma Hashimoto
 
-![joint many tasks.PNG](arch.png)
+![1.PNG](arch.png)
 
