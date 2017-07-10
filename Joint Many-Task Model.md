@@ -14,5 +14,5 @@ Goldberg (2016) who showed that predicting two
 different tasks is more accurate when performed in
 different layers than in the same layer
 
-![1.PNG](arch.png)
+![architecture.PNG](1.PNG)
 
