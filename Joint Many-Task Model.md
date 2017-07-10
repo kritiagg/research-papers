@@ -46,10 +46,26 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
    - Predict the parent node for every word in a sentence.
    - standard bi LSTM + softmax and relu for dependency label which is then used in the calculation of the probability of a word being a parent.
    - By now we have 5 layers of bi LSTM
+   
 - Semantic task: semantic relatedness
   - aka relatedness of 2 sentences.
   - We have a similar task called textual entailment: which compares 2 sentences and tells if one sentence is the premise and other the hypothesis, then do the premise entails the hypothesis.
-  - there is another 
+  - Input: Use the forth and fifth bi LSTM layers which captures the semantic representation of the sentences.
+  - sentence level representation: using max pooling of the word representations.
+  - semantic relatedness is calculated by concatenating element wise subtraction and element wise multiplication.
+  
+- Semantic task: Textual entailment
+  - max pooling as in the last layer
+  - use softmax on the element wise subtraction.
+
+
+## Training
+- Pre training word representations:
+  - pre train the word embeddings using skip gram model with negative sampling. Pre train char n-gram skip gram. 
+  - fine tune when used in the final model.
+- Training POS Layer:
+  - 
+  
    
    
    
