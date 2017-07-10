@@ -37,11 +37,11 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
     - Input : output of first layer, hidden states from the same layer but previous time (its a LSTM!)
        - word embeddings
        - ![input.png](3.PNG)
- ![posnchunking.PNG](2.NG)
+ ![posnchunking.PNG](2.PNG)
 - Syntactic task : Dependency parsing
    - Identifies syntactic relationships(such as adjective modifying a noun) between a pair of words in a sentence. 
    - Bi direction LSTM
    - Input : word embeddings, outputs from the last 2 layers, hidden states from the same layer but previous time.
-     - ![input.png](4.PNG
+     - ![input.png](4.PNG)
    
    
