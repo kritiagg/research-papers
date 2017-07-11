@@ -70,8 +70,10 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
      ![succ_reg.png](img/joint-many-tasks/5.PNG)
   - {\theta_e} is the current embedding, {\theta_e}' is the final embedding after training the final task in teh top most layer at previous training epoch.
    ![e1.png](img/joint-many-tasks/e1.PNG)
+   
 - Training chunking layer:
  ![e2.png](img/joint-many-tasks/e2.PNG)
+ 
 - Training sentence relatedness
  ![e3.png](img/joint-many-tasks/e3.PNG)
   
