@@ -14,7 +14,7 @@ Goldberg (2016) who showed that predicting two
 different tasks is more accurate when performed in
 different layers than in the same layer
 
-![architecture.PNG](img/joint-many-tasks/joint many tasks.PNG)
+![architecture.PNG](img/joint-many-tasks/1.PNG)
 
 ## Embeddings
 - Word embeddings: skip gram to train word embedding matrix shared across all tasks. For unknown tokens, only one token UNK
@@ -69,7 +69,11 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
   - interesting is the successive L2 regularization term which is used to take into account the information learnt from other tasks
      ![succ_reg.png](img/joint-many-tasks/5.PNG)
   - {\theta_e} is the current embedding, {\theta_e}' is the final embedding after training the final task in teh top most layer at previous training epoch.
-  
+   ![e1.png](img/joint-many-tasks/e1.PNG)
+- Training chunking layer:
+ ![e2.png](img/joint-many-tasks/e2.PNG)
+- Training sentence relatedness
+ ![e3.png](img/joint-many-tasks/e3.PNG)
   
    
    
