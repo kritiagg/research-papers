@@ -43,20 +43,24 @@ the richness of the representation vi
 that takes the
 entire input sequence into account.
 For a k-layer bi-RNN tagger we get:
+
 tag(w1:n, i) = ˆyi = f(v
 <sup>k</sup>
 <sub>i</sub>
 )
+
 v
 <sup>k</sup>
 <sub>i</sub> = BIRNNk
 (x1:n, i)
+
 x1:n = E(w1), E(w2), · · · , E(wn)
 where E as an embedding function mapping each
 word in the vocabulary into a demb-dimensional
 vector, and v
 <sup>k</sup>
 <sub>i</sub>
+
 is the output of the k-th BIRNN layer
 as defined above.
 
