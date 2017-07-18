@@ -1,14 +1,10 @@
 # Summary on MTL
 
-## Some insights
-
-### When to use Alternate training?
-- When we have different datasets for different tasks
-
-
 ## Experiments experiments..
 ### Training protocols:
-- Alternate training: easiest to implement
+- Alternate training: 
+  - Choose a random training example and task, compute the loss and back propagate till the current task layer.
+  - easiest to implement
   - used by lower layers supervision paper
   - mostly used when different dataset (Hence useful for EQnA task)
   
