@@ -18,6 +18,9 @@
   - Senna embeddings used for POS and chunking tasks
   - Glove : used by RNet, BiDAF, Match LSTM papers
   - word2vec: By Joint multi training paper
+    - https://www.tensorflow.org/tutorials/word2vec
+    - Word2vec is a particularly computationally-efficient predictive model for learning word embeddings from raw text. It comes in two flavors, the Continuous Bag-of-Words model (CBOW) and the Skip-Gram model (Section 3.1 and 3.2 in Mikolov et al.). Algorithmically, these models are similar, except that CBOW predicts target words (e.g. 'mat') from source context words ('the cat sits on the'), while the skip-gram does the inverse and predicts source context-words from the target words. This inversion might seem like an arbitrary choice, but statistically it has the effect that CBOW smoothes over a lot of the distributional information (by treating an entire context as one observation). For the most part, this turns out to be a useful thing for smaller datasets. However, skip-gram treats each context-target pair as a new observation, and this tends to do better when we have larger datasets. We will focus on the skip-gram model in the rest of this tutorial.
+    - Hence, for large datasets, if you are using word2vec use it with skip gram model.
   - skip gram vector: might be suitable for sentences too : used by Joint multi training POS, Chunking, etc.
 ### Hard parameter sharing vs soft parameter sharing
   - Hard parameter sharing: easier to implement
