@@ -22,9 +22,9 @@
   - More auxilliary tasks can be added which might help the main task
   - 
 ### Regularization
-- Change the Loss function or objective function to include L2 regularization 
-- and/or successive regularization term 
-- or add Dropout layers
+- Change the Loss function or objective function in old papers (BiDAF etc.) to include L2 regularization 
+  - and/or successive regularization term 
+  - or add Dropout layers
 
 ### Similarity task EQnA :
   - Attention layer captures similarity, perhaps we can use it for EQnA or just use KL divergence loss functions.
