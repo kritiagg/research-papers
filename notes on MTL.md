@@ -16,7 +16,8 @@
   
 ### Different embeddings: 
   - Senna embeddings used for POS and chunking tasks
-  - word2vec and Glove : used by RNet, BiDAF, Match LSTM papers
+  - Glove : used by RNet, BiDAF, Match LSTM papers
+  - word2vec: By Joint multi training paper
   - skip gram vector: might be suitable for sentences too : used by Joint multi training POS, Chunking, etc.
 ### Hard parameter sharing vs soft parameter sharing
   - Hard parameter sharing: easier to implement
