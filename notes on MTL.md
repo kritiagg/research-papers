@@ -1,5 +1,10 @@
 # Summary on MTL
 
+## Motivation
+- Acts as a regularizer
+- Suitable if not much data for some task
+- Some patterns might be difficult to learn using a particular task and easier for some other task
+
 ## Experiments experiments..
 ### Training protocols:
 - Alternate training: 
