@@ -43,7 +43,7 @@ the richness of the representation vi
 that takes the entire input sequence into account.
 
 
-For a k-layer bi-RNN tagger we get:
+- For a k-layer bi-RNN tagger we get:
 
 tag(w1:n, i) = ˆyi = f(v<sup>k</sup><sub>i</sub>)
 
@@ -57,7 +57,37 @@ vector, and v<sup>k</sup><sub>i</sub>
 is the output of the k-th BIRNN layer
 as defined above.
 
+### MLP in deep bi RNNs
+- The tasks although different have a common substructure.
+- We can share the substructure eg. word embeddings etc.
+- This is done by sharing biRNN part of the network but training specialized classification tagger for each task t.
 
+### Multi task training protocol
+- Alternate training
+- At each step, we choose a random task and a random training example. The input is the same for all the tasks but the output labels are task specific.
+- We then use tagger to predict the label and back propagate till level l(t). That is for all the parameters above the level containing the tagger layer are not updated.
+
+### Implementation details
+-  The classifiers ft() take the form
+of a linear transformation followed by a softmax
+ft(v) = arg maxi sof tmax(W(t)v+b
+t
+)[i], where
+the weights matrix W(t)
+and bias vector b
+(t)
+are
+task-specific parameters.
+- Cross entropy loss is used
+- Back propagation with SGD, batch size 1 and default learning rate. 
+- Senna embeddings and Polyglot embeddings
+- Tasks: Chunking, POS, CCG 
+
+## Results
+
+## Notes
+- MTL only works if the tasks are sufficiently similar
+- Rademacher complexity: computing the 
 
 
 
