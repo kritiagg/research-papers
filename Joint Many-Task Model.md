@@ -43,18 +43,20 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
    - Bi direction LSTM
    - Input : word embeddings, outputs from the last 2 layers, hidden states from the same layer but previous time.
      - ![input.png](img/joint-many-tasks/4.PNG)
-   - Predict the parent node for every word in a sentence.
+   - Predict the parent node for every word in a sentence using matching function between word w<sub>t</sub> and the candidates of the parent node as m(t,j) = h<sub>t</sub><sup>T</sup> W<sub>d</sub>h<sub>j</sub>, where W<sub>d</sub> is the parameter matrix.
    - standard bi LSTM + softmax and relu for dependency label which is then used in the calculation of the probability of a word being a parent.
-   - By now we have 5 layers of bi LSTM
+   - By now we have 3 layers of bi LSTM
    
 - Semantic task: semantic relatedness
   - aka relatedness of 2 sentences.
-  - We have a similar task called textual entailment: which compares 2 sentences and tells if one sentence is the premise and other the hypothesis, then do the premise entails the hypothesis.
-  - Input: Use the forth and fifth bi LSTM layers which captures the semantic representation of the sentences.
+  - Input: Use the forth bi LSTM layers which captures the semantic representation of the sentences.
+  - output is a real valued relatedness score.
+  - This task is very similar to the textual entailment task since if the semantic relatedness is low, the 2 sentences are unlikely to entail each other.
   - sentence level representation: using max pooling of the word representations.
   - semantic relatedness is calculated by concatenating element wise subtraction and element wise multiplication.
   
 - Semantic task: Textual entailment
+  - aka compares 2 sentences and tells if one sentence is the premise and other the hypothesis, then do the premise entails the hypothesis.
   - max pooling as in the last layer
   - use softmax on the element wise subtraction.
 
