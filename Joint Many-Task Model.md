@@ -79,7 +79,10 @@ t, #B#C, Ca, at, t#E#, #B#Ca, Cat, at#E#}
  
 - Training sentence relatedness
  ![e3.png](img/joint-many-tasks/e3.PNG)
+- Dropout used 
+- learning rate annealing done 
+- gradient clipping strategy: Gradient Clipping is a technique to prevent exploding gradients in very deep networks, typically Recurrent Neural Networks. There exist various ways to perform gradient clipping, this paper uses a simple function min(3,depth) where depth is the number of bi LSTM layers involved in the task training.
   
-   
-   
+## Sample implementation
+https://github.com/vyraun/joint-many-task-model
    
