@@ -1,4 +1,4 @@
-# Summary on MTL
+# Summary on MTLfor NLP
 
 ## Motivation
 - Acts as a regularizer
@@ -14,6 +14,11 @@
   - easiest to implement
   - used by lower layers supervision paper
   - mostly used when different dataset (Hence useful for EQnA task)
+- Joint training 
+  - as in Joint multi task training paper
+    - train all the tasks at different layers
+    - back propagate from the task layer to the embeddings?
+  - Weighted average of the tasks
   
 ### Different embeddings: 
   - Senna embeddings used for POS and chunking tasks
@@ -46,8 +51,11 @@
 ### Models and Architectures:
 - Pass lower layer outputs directly to upper layers as in Joint Multi task training
 - Dynamic memory networks: multiple hops in BiDAF
-- 
+- Deep Relationship Networks: hard parameter sharing 
+  - Task specific layers
+  - Cons: pre-defined sharing structure which is not well defined for NLP
+ - Fully adaptive feature learning: difficult as its a dynamic network
 
 ## What's next?
 - alternate training
-- 
+- Joint training
