@@ -1,4 +1,4 @@
-# Summary on MTLfor NLP
+# Summary on Multi Task Learning for NLP
 
 ## Motivation
 - Acts as a regularizer
