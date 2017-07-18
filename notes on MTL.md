@@ -9,6 +9,7 @@
 ### Training protocols:
 - Alternate training: 
   - Choose a random training example and task, compute the loss and back propagate till the current task layer.
+  - Might create a bias towards the task with bigger dataset.
   - easiest to implement
   - used by lower layers supervision paper
   - mostly used when different dataset (Hence useful for EQnA task)
