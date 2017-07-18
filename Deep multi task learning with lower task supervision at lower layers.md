@@ -87,7 +87,6 @@ task-specific parameters.
 
 ## Notes
 - MTL only works if the tasks are sufficiently similar
-- Rademacher complexity: computing the 
-
-
+- Rademacher complexity is the ability of models
+to fit random noise. Using the supervision at lower layers, Rademacher complexity is higher.
 
