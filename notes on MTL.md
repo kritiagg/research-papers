@@ -4,6 +4,7 @@
 - Acts as a regularizer
 - Suitable if not much data for some task
 - Some patterns might be difficult to learn using a particular task and easier for some other task
+- Biases the model towards a presentation that other tasks also prefer.
 
 ## Experiments experiments..
 ### Training protocols:
@@ -24,7 +25,8 @@
   - skip gram vector: might be suitable for sentences too : used by Joint multi training POS, Chunking, etc.
 ### Hard parameter sharing vs soft parameter sharing
   - Hard parameter sharing: easier to implement
-  - Soft parameter sharing: harder to implement (unclear too!)
+  - Soft parameter sharing: harder to implement
+    - regularize the distance between the parameters of the model (l2)
 ### Different depth different tasks:
   - low level tasks like EQnA at lower levels and higher level tasks ranker and extractor on the same high level
   - Experiment with ranking and extracting at different levels
