@@ -13,6 +13,7 @@ complex NLP tasks at successively deeper layers.
 Goldberg (2016) who showed that predicting two
 different tasks is more accurate when performed in
 different layers than in the same layer
+- Contribution: many tasks for joint training, lower level tasks improvement with the higher level tasks.
 
 ![architecture.PNG](img/joint-many-tasks/1.PNG)
 
