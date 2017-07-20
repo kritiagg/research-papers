@@ -9,8 +9,13 @@ passages that can be fed to the model. We now need to figure out a way to calcul
 - What are the auxilliary tasks that can be used?
 
 ## Some sample auxilliary tasks:
-- Query selection
+- Query selection (we are already doing query extraction)
 - multi topic classification of the passages 
 - similarity analysis of 2 passages
 - find if a given question is answered by the query
+- readability of the passage
+- metadata: how many a url was clicked before?
+- similar queries 
+
+
 
