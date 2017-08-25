@@ -1,0 +1,21 @@
+# Don’t count, predict! A systematic comparison of context-counting vs. context-predicting semantic vectors
+
+## Summary: 
+- http://www.aclweb.org/anthology/P14-1023
+- The results of this paper show that it is more beneficial to use prediction models for word embeddings instead of the classic counting approach.
+- Prediction models are trained using unsupervised learning, but a sort of indirect supervision by using the parameters that are best suited
+for the semantic task at hand.
+- Instead of first collecting context vectors and then
+reweighting these vectors based on various criteria,
+the vector weights are directly set to optimally
+predict the contexts in which the corresponding
+words tend to appear. Since similar words occur
+in similar contexts, the system naturally learns to
+assign similar vectors to similar words.
+- There are no empirical results for the comparison of the count based and prediction based approach. Mostly because the prediction based 
+approach was developed as a way to initialize the vectors in neural network based NLP tasks.
+- What is interesting is a result from another paper which concludes that  Count vectors make for better inputs
+in a phrase similarity task, whereas the two representations
+are comparable in a paraphrase classifi-
+cation experiment.
+- 
