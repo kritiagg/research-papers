@@ -1,1 +1,4 @@
 # Attention in neural networks
+
+##References
+[http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/]
