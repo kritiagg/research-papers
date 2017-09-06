@@ -1,4 +1,20 @@
 # Attention in neural networks
+If there is more than one input that affects the output, we resort to RNNs since they can take into account for more than just one input state. LSTMs are just a better version of RNNs that are better at remembering stuff. Later, researchers found that sending the input also in backward order helps in better remembrance as the last of the sentence is then closer to the decoder.
+
+Still, they all had a limit to which they rememebred. Also, in all these mechanisms we are trying to encode the input to a fixed length vector. With an attention mechanism we no longer try encode the full source sentence into a fixed-length vector. Rather, we allow the decoder to “attend” to different parts of the source sentence at each step of the output generation. Importantly, we let the model learn what to attend to based on the input sentence and what it has produced so far.
+
+![alt text](https://github.com/kritiagg/research-papers/blob/master/img/attention/attention.PNG)
+The important part is that each decoder output word y_t now depends on a weighted combination of all the input states, not just the last state. The a‘s are weights that define in how much of each input state should be considered for each output. So, if a_{3,2} is a large number, this would mean that the decoder pays a lot of attention to the second state in the source sentence while producing the third word of the target sentence. The a's are typically normalized to sum to 1 (so they are a distribution over the input states).
+
+## The truth
+If we look a bit more look closely at the equation for attention we can see that attention comes at a cost. We need to calculate an attention value for each combination of input and output word. If you have a 50-word input sequence and generate a 50-word output sequence that would be 2500 attention values. That’s not too bad, but if you do character-level computations and deal with sequences consisting of hundreds of tokens the above attention mechanisms can become prohibitively expensive.
+
+Actually, that’s quite counterintuitive. Human attention is something that’s supposed to save computational resources. By focusing on one thing, we can neglect many other things. But that’s not really what we’re doing in the above model. We’re essentially looking at everything in detail before deciding what to focus on. Intuitively that’s equivalent outputting a translated word, and then going back through all of your internal memory of the text in order to decide which word to produce next. That seems like a waste, and not at all what humans are doing. In fact, it’s more akin to memory access, not attention, which in my opinion is somewhat of a misnomer (more on that below). Still, that hasn’t stopped attention mechanisms from becoming quite popular and performing well on many tasks.
+
+## So?
+
+The attention mechanism is almost like a soft memory. It performs better since it lets us go back and refer to the input to find the output. Instead of finding exactly what to focus on, attention mechanism gives us a weigthed combination of all memory locations which acts as a soft retrieval of memory.
 
 ##References
+
 [http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/]
