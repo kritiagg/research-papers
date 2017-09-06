@@ -15,6 +15,9 @@ Actually, that’s quite counterintuitive. Human attention is something that’s
 
 The attention mechanism is almost like a soft memory. It performs better since it lets us go back and refer to the input to find the output. Instead of finding exactly what to focus on, attention mechanism gives us a weigthed combination of all memory locations which acts as a soft retrieval of memory.
 
+It also helps us in visualizing what the network is focusing on to get to the output by ploting the input and output sequences.
+![alt text](https://github.com/kritiagg/research-papers/blob/master/img/attention/attend2.PNG)
+
 ##References
 
 [http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/]
