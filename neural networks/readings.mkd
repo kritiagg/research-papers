@@ -1,1 +1,2 @@
 http://cs231n.github.io/
+http://cs231n.stanford.edu/syllabus.html
