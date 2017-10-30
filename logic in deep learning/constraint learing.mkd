@@ -1,0 +1,4 @@
+# Constraint learning
+
+- Provides a form of weak supervision by adding constraints in loss function. 
+- Helpful in cases when the dataset is small 
