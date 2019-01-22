@@ -1,0 +1,5 @@
+# [Predicting Visual Features from Text forImage and Video Caption Retrieval](https://arxiv.org/pdf/1709.01362.pdf)
+- Creates Word2VisualVEc for vedio and caotion retrieval. The main idea being converting from text space to visual space.
+- Uses Word2Vec and RNN (the output of the last RNN as the sentence embedding)
+- transform the encoding into a higher-dimensional visual feature space via a multi-layer perceptron
+
