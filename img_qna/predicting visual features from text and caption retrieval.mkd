@@ -1,5 +1,19 @@
-# [Predicting Visual Features from Text forImage and Video Caption Retrieval](https://arxiv.org/pdf/1709.01362.pdf)
+# [Predicting Visual Features from Text forImage and Video Caption Retrieval (2018)](https://arxiv.org/pdf/1709.01362.pdf)
 - Creates Word2VisualVEc for vedio and caotion retrieval. The main idea being converting from text space to visual space.
 - Uses Word2Vec and RNN (the output of the last RNN as the sentence embedding)
 - transform the encoding into a higher-dimensional visual feature space via a multi-layer perceptron
+- Previous works: 
+* Linear CCA
+* Using pretrained fc6 AlexNet as image features
+* Use LSTM for learning text and image modalities and then using compact bilinear pooling for interations
+
+
+
+
+# [Framing Image Description as a Ranking Task: Data, Models and Evaluation Metrics by Hodosh et al. (2015)](https://www.ijcai.org/Proceedings/15/Papers/593.pdf)
+- Changed the problem of captioning the images to a ranking task. By ranking the captions given an image. 
+- This technique helps in getting rid of techniques like BLUE score and ROUGE score as metrics.
+- Used KCCA (Kernal Canonical Correlation Analysis) to bring the text and image in same latent space.
+- Used a subsequence string Kernel for Text kernal and spatial pyramid kernel for images.
+
 
