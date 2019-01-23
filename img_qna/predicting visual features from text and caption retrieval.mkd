@@ -3,10 +3,11 @@
 - Uses Word2Vec and RNN (the output of the last RNN as the sentence embedding)
 - transform the encoding into a higher-dimensional visual feature space via a multi-layer perceptron
 - Previous works: 
-* Linear CCA
-* Using pretrained fc6 AlexNet as image features
-* Use LSTM for learning text and image modalities and then using compact bilinear pooling for interations
-
+  * Linear CCA
+  * Using pretrained fc6 AlexNet as image features
+  * Use LSTM for learning text and image modalities and then using compact bilinear pooling for interations
+ - Model:
+ ![model.PNG](../img/img_in_qna/img1.PNG)
 
 
 
