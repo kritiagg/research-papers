@@ -8,6 +8,13 @@
   * Use LSTM for learning text and image modalities and then using compact bilinear pooling for interations
  - Model:
  ![model.PNG](../img/img_in_qna/img1.PNG)
+ - For text encoding:
+  * Bag Of Words: avg pool at the end to get the embedding of the complete sentence
+  * Word2Vec on Flicker tags
+  * RNN
+  * All three representations are contatenated
+  - For image encoding:
+   * Use GoogleNet/ResNet-152 features
 
 
 
