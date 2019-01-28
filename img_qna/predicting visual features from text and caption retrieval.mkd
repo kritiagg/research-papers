@@ -25,8 +25,7 @@
 - Used a subsequence string Kernel for Text kernal and spatial pyramid kernel for images.
 
 
-# [EZLearn: Exploiting Organic Supervision in Automated Data Annotation]
-(https://arxiv.org/pdf/1709.08600.pdf)
+# [EZLearn: Exploiting Organic Supervision in Automated Data Annotation](https://arxiv.org/pdf/1709.08600.pdf)
 - Input: images, their textual descriptions which can help in identifying the class.
 - Output: Given an input image, classify the image in the specified class. So, basically cluster the images using the textual and image features.
 - Dataset: medical dataset containing the images for genes etc.
