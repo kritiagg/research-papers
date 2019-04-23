@@ -1,0 +1,5 @@
+# Multi-task Learning with Sample Re-weighting for Machine Reading Comprehension
+[https://arxiv.org/pdf/1809.06963.pdf]
+## Two ideas: 
+- multi task learning
+- sample re-weighting
