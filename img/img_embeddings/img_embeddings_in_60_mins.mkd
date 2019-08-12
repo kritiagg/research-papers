@@ -1,0 +1,7 @@
+## Train imagenet in 60 minutes using Resnet 50
+- By Facebook folks
+- batch size 8192 with the same accuracy as the mini batch 256
+- Tricks:
+ * Linear scaling to adjust the learning rate
+ * warmup : low learning rate at start of training
+ * 
