@@ -2,7 +2,8 @@
 #####  COMBINING LOCAL CONVOLUTION WITH GLOBAL SELF-ATTENTION FOR READING COMPREHENSION
 - By CMU and Google Brain
 - [https://medium.com/@minsangkim/implementing-question-answering-networks-with-cnns-5ae5f08e312b]
-###Notes
+
+#### Notes
 - No RNN, hence fast
 - Data augmentation by translating the data to one language and then translating back to English.
 - 
