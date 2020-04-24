@@ -1,2 +1,4 @@
 # Scaling laws for neural language models:
-## 
+### By OpenAi
+### study of empirical scaling laws for language model performance on cross entropy loss. 
+
