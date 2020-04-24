@@ -5,27 +5,27 @@
 - Loss scales as a power-law with model size, dataset size and amount of compute used for training. 
 - *Best recipe: Large models are compute efficient, Train a large model with relatively modest training set and stopping way before convergence.*
 #### For transformers:
-##### Performance depends strongly on model parameters N, <encluding embeddings>, sixe of dataset D, amount of compute used for training C. NOT on model shape <depth vs width>
+##### 1. Performance depends strongly on model parameters N, <encluding embeddings>, sixe of dataset D, amount of compute used for training C. NOT on model shape <depth vs width>
  
-##### Power law relationship:
+##### 2. Power law relationship:
   of performance with the N,D,C. Performance flattens out before reaching zero loss.
-##### Universality of overfitting:
+##### 3. Universality of overfitting:
 Performance improves predictably as long as we scale up N and D but enters a state of diminishing returns if N or D is fixed and other increases.Every time we increase the model size by 8x, we only need to increase the data by 5x
 
-##### Universality of training:
+##### 4. Universality of training:
 Training curves follow predictable power-laws whose parameters are roughly independent of model size. By extrapolating early part of training curve, we can roughly predict loss that would be achieved if we trained for much longer.
 
-##### Transfer improves with test performance: 
+##### 5. Transfer improves with test performance: 
 Transfer to a different distribution incurs a constant penalty but otherwise improves roughly in line with performance on training set.
 
-##### Sample efficiency:
+##### 6. Sample efficiency:
 Large models are more sample efficient than small models, reaching the same performance in less steps and less data
 
-##### Convergence is inefficient:
+##### 7. Convergence is inefficient:
 - If we have fixed budget compute C, but no restriction to N and D. we attain optimal perf by training on very large models but stopping significantly short of convergence. Data requirements grow very slowly as compared to the compute D ~ C^(0.27)
 
 - As more compute is available spend that in increasing the model size than the increase in data using larger batch size.
-![power_laws.png][./../../img/nlp-scaling/power-law-1.PNG]
-##### Optimal batch size: 
+![power_laws.png](./../../img/nlp-scaling/power-laws-1.PNG)
+##### 8. Optimal batch size: 
 Ideal batch size for training models is roughly a power of loss only. and continues to be predictable by measuring the gradient noise scale. 
 
