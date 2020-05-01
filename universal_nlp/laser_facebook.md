@@ -11,4 +11,5 @@
 - Use shared BPE by concatenation of all languages data, they have different tokenization for each languages.
 - Trained only with public parallel data of English and Spanish.
 - Improved performance with more languages addition. Trained finally with 93 languages with various different SOV/SVO/VSO (V:Verb, O:Object,S:Subject)
+- Dataset : 233M
 
