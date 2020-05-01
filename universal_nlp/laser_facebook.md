@@ -1,5 +1,6 @@
 # LASER multilingual sentence embeddings
 [https://engineering.fb.com/ai-research/laser-multilingual-sentence-embeddings]
+
 [https://arxiv.org/pdf/1812.10464.pdf]
 ## Notes:
 - It has decoder-encoder architecture as in other seq-to-seq models trained for Machine language translation task.
