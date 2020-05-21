@@ -9,4 +9,4 @@
 ![probe.png](images/probe.PNG)
 - The various training schemes done were:
 ![examples.png](images/examples.PNG)
-## What is interesting is that the last two experiments with two types of parenthesis lead to similar results. As in even when there was no hierarchy in the second set of paranthesis based lang, it was enough for the model to learn that what starts and the same token ends.
+#### What is interesting is that the last two experiments with two types of parenthesis lead to similar results. As in even when there was no hierarchy in the second set of paranthesis based lang, it was enough for the model to learn that what starts and the same token ends.
