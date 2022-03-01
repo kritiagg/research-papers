@@ -6,6 +6,14 @@ Still, they all had a limit to which they rememebred. Also, in all these mechani
 ![alt text](https://github.com/kritiagg/research-papers/blob/master/img/attention/attention.PNG)
 The important part is that each decoder output word y_t now depends on a weighted combination of all the input states, not just the last state. The a‘s are weights that define in how much of each input state should be considered for each output. So, if a_{3,2} is a large number, this would mean that the decoder pays a lot of attention to the second state in the source sentence while producing the third word of the target sentence. The a's are typically normalized to sum to 1 (so they are a distribution over the input states).
 
+## Understanding the formula for self attention
+![image](https://github.com/kritiagg/research-papers/blob/master/img/attention/attention_diag.PNG)
+Here notice the query, key and value for the sentence 'Action gets results'. There is a step to divide score/8 which is square root of dim(64). So, essentially each value is now replaced by a weighted sum of the importance of each term. 
+
+## Lets look at the Maths and actual input and output
+I dont think I can do a better job at explaining how the author explained here.
+[https://towardsdatascience.com/understanding-transformers-the-data-science-way-e4670a4ee076]
+
 ## The truth
 If we look a bit more look closely at the equation for attention we can see that attention comes at a cost. We need to calculate an attention value for each combination of input and output word. If you have a 50-word input sequence and generate a 50-word output sequence that would be 2500 attention values. That’s not too bad, but if you do character-level computations and deal with sequences consisting of hundreds of tokens the above attention mechanisms can become prohibitively expensive.
 
@@ -21,3 +29,5 @@ It also helps us in visualizing what the network is focusing on to get to the ou
 ##References
 
 [http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/]
+[https://www.analyticsvidhya.com/blog/2019/06/understanding-transformers-nlp-state-of-the-art-models/]
+[https://towardsdatascience.com/understanding-transformers-the-data-science-way-e4670a4ee076]
